@@ -1,101 +1,417 @@
-<div align=center>
- 
-# 🚀 ZxCDDoS: Release v1.5 - Free DDoS Panel 🚀
+# 🛡️ HulkDDoS
 
-# Store: https://condi.billgang.store/
+### Authorized HTTP Load & Stress Testing Toolkit
 
-<p>
- <img src="https://img.shields.io/github/stars/hoaan1995/ZxCDDoS?color=%23DF0067&style=for-the-badge"/> &nbsp;
- <img src="https://img.shields.io/github/forks/hoaan1995/ZxCDDoS?color=%239999FF&style=for-the-badge"/> &nbsp;
- <img src="https://img.shields.io/github/license/hoaan1995/ZxCDDoS?color=%23E8E8E8&style=for-the-badge"/> &nbsp;
- 
-</p>
+HulkDDoS is a security research and HTTP load-testing project intended for **authorized testing environments**. It can be used to study application behavior, server performance, network handling, and defensive security mechanisms.
 
-> Terminal only accepts ANSI color.<br>
-> Username: admin<br>
-> Password: admin<br>
-<p align="center">  <a href="https://t.me/learneverything9"><img width="160" height="50" src="https://i.imgur.com/N7AK7XY.png"></a></p>
- 
-## Language</br>
+> ⚠️ **Legal & Ethical Use Only**
+>
+> Use this project only against systems that you own or have explicit authorization to test. Do not use it to disrupt, overload, or attack third-party infrastructure.
 
- <img src="https://img.shields.io/badge/Python-FFDD00?style=for-the-badge&logo=python&logoColor=blue"/> <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/> <img src="https://img.shields.io/badge/Perl-39457E?style=for-the-badge&logo=perl&logoColor=white"/> <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white"/> <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white"/>
- </div>
- 
- ## Logs</br>
- - UPDATE TLS AND HTTP1 METHODS!
- - UPDATE NEW HTTP(s) PROXY!
- 
-## Screenshot
-![lk](https://i.ibb.co/LNkqyPR/bandicam-2022-04-12-22-11-34-101.jpg)
+---
 
-# Tree
-* [Read now pls](#README)
-* [Info](#Info)
-* [Setup](#Setup)
-* [Credits](#Credits)
-* [T.O.S](#TOS)
-* [Contact](#Contact)
+## ✨ Features
 
-# README ♥️
-Thank you for using, please help me press a star button, thank you very much.<br>
-One star = continuously updating multiple methods
+* 🌐 HTTP/HTTPS testing
+* 📊 Controlled traffic testing
+* 🔬 Security research
+* 🧪 Application stress testing
+* 🐍 Python support
+* 🟢 Node.js support
+* 📱 Termux compatibility
+* 🐧 Debian-based Linux compatibility
+* 🔧 Virtual-environment based Python installation
 
-# Info
-- [x] Open Source
-- [x] Powerful
-- [x] Simple
-- [x] Methods for Layer 4 and 7
-- [x] Bypass (Cloudflare, OVH, NFO,...)  
+---
 
+## 🖥️ Supported Environments
 
-# Setup
-```sh
-Debain, Ubuntu (Ubuntu 20.04 better):
-sudo apt-get install git -y
-sudo apt-get install golang -y
-sudo apt-get install perl -y
-sudo apt-get install python3 -y
-sudo apt-get install python2 -y
-sudo apt-get install python3-pip -y
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -;sudo apt -y install nodejs
+* Kali Linux
+* Debian
+* Ubuntu
+* Termux
+* Other compatible Linux environments
 
-How to use: 
-- Recommended in shell of google, azure,...
-- Using vps with high speed will be stronger
+---
 
-git clone https://github.com/hoaan1995/ZxCDDoS/
-cd ZxCDDoS/
-npm i requests https-proxy-agent crypto-random-string events fs net cloudscraper request hcaptcha-solver randomstring cluster cloudflare-bypasser http http2 crypto tls
-pip3 install -r requirements.txt
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-apt-get install ./google-chrome-stable_current_amd64.deb
-ulimit -n 999999
-chmod 777 *
-python3 c2.py
+# 🐧 Kali / Debian / Ubuntu
+
+## 1. Install System Dependencies
+
+```bash
+sudo apt update
+
+sudo apt install -y \
+git \
+golang \
+perl \
+python3 \
+python3-full \
+python3-venv \
+python3-pip \
+nodejs \
+npm
 ```
 
-# Credits
-```sh
-zxcr9999 (Reworked CnC and added some methods .-.)
-SkyWtkhIsBack (Example Panel and L7 methods <3)
-Empfaked (Layer 7 methods <3)
-HyukIsBack (Layer 7 methods <3)
-im-federal (Layer 4 and AMP methods <3)
-R00tS3C (Layer 4 and AMP methods <3)
-forkyyy (LAYER 7 METHODS <3)
-Leeon123 (SPECIAL METHODS <3)
-TheSpeedX (HTTP, SOCKS5, SOCK4 proxies <3)
+---
+
+## 2. Clone Repository
+
+```bash
+git clone https://github.com/rahadhasan666/hulkddos.git
+cd hulkddos
 ```
 
-# TOS:
-```sh
-Do not attack government pages (.gov/.gob), educational pages (.edu) or the United States Department of Defense (.mil), 
-the creator is not responsible for the damage caused by the attacks. 
-remember: you are responsible for the attacks since this tool was created for educational purposes
+---
+
+## 3. Create Python Virtual Environment
+
+Modern Kali/Debian systems use **PEP 668**, which can prevent system-wide `pip` installations.
+
+Create an isolated virtual environment:
+
+```bash
+python3 -m venv .venv
 ```
 
-# CONTACT:
-```sh
-Telegram: @zxcr9999
-Discord: zxcr9999#1770
+Activate it:
+
+```bash
+source .venv/bin/activate
 ```
+
+Your terminal should now show something similar to:
+
+```text
+(.venv) root@kali:~/hulkddos#
+```
+
+---
+
+## 4. Upgrade pip
+
+```bash
+python -m pip install --upgrade pip
+```
+
+---
+
+## 5. Install Python Dependencies
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+This avoids the:
+
+```text
+error: externally-managed-environment
+```
+
+error without modifying the system Python installation.
+
+---
+
+## 🔄 Activate Environment Again
+
+Whenever you open a new terminal:
+
+```bash
+cd ~/hulkddos
+source .venv/bin/activate
+```
+
+To leave the virtual environment:
+
+```bash
+deactivate
+```
+
+---
+
+# 📱 Termux Installation
+
+## 1. Update Termux
+
+```bash
+pkg update && pkg upgrade -y
+```
+
+---
+
+## 2. Install Required Packages
+
+```bash
+pkg install -y git python nodejs
+```
+
+---
+
+## 3. Clone Repository
+
+```bash
+git clone https://github.com/rahadhasan666/hulkddos.git
+cd hulkddos
+```
+
+---
+
+## 4. Create Python Virtual Environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it:
+
+```bash
+source .venv/bin/activate
+```
+
+---
+
+## 5. Upgrade pip
+
+```bash
+python -m pip install --upgrade pip
+```
+
+---
+
+## 6. Install Python Requirements
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+---
+
+## 🔄 Reactivate the Environment
+
+After reopening Termux:
+
+```bash
+cd ~/hulkddos
+source .venv/bin/activate
+```
+
+---
+
+# 📦 Node.js Dependencies
+
+Install the dependencies declared by the project:
+
+```bash
+npm install
+```
+
+If you are developing or modifying the project, use the `package.json` file as the source of truth for Node.js dependencies.
+
+---
+
+# 🧪 Authorized Testing
+
+Use the project only in environments where you have permission to perform testing.
+
+Recommended development targets:
+
+```text
+localhost
+127.0.0.1
+Private test servers
+Development environments
+Authorized staging infrastructure
+```
+
+A typical authorized workflow:
+
+```text
+┌──────────────────────┐
+│ Development Server   │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│ Controlled Test      │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│ Monitor Resources    │
+│ CPU / RAM / Network  │
+└──────────┬───────────┘
+           │
+           ▼
+┌──────────────────────┐
+│ Analyze Results      │
+└──────────────────────┘
+```
+
+---
+
+# 📊 System Monitoring
+
+During authorized testing, monitor the test server.
+
+### CPU / Memory
+
+```bash
+top
+```
+
+or:
+
+```bash
+htop
+```
+
+### Network Connections
+
+```bash
+ss -s
+```
+
+---
+
+# 🛡️ Defensive Security
+
+When evaluating your own infrastructure, consider implementing:
+
+* Rate limiting
+* Request throttling
+* Connection limits
+* Reverse proxies
+* Web Application Firewalls
+* CDN protection
+* IP reputation filtering
+* Application monitoring
+* Server logging
+* Automated alerting
+
+---
+
+# 📁 Project Structure
+
+```text
+hulkddos/
+│
+├── hk.py
+├── requirements.txt
+├── package.json
+├── package-lock.json
+├── .venv/
+└── README.md
+```
+
+---
+
+# 🔧 Development Setup
+
+Clone the repository:
+
+```bash
+git clone https://github.com/rahadhasan666/hulkddos.git
+cd hulkddos
+```
+
+Create the virtual environment:
+
+```bash
+python3 -m venv .venv
+```
+
+Activate it:
+
+```bash
+source .venv/bin/activate
+```
+
+Install dependencies:
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+npm install
+```
+
+---
+
+# 🚫 Avoid System-Wide pip Installation
+
+Do **not** use:
+
+```bash
+sudo pip3 install -r requirements.txt
+```
+
+on modern Kali/Debian systems.
+
+Do not use:
+
+```bash
+pip3 install --break-system-packages
+```
+
+unless you specifically understand the consequences.
+
+The recommended approach is:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+```
+
+---
+
+# ⚠️ Important Disclaimer
+
+This project is provided for:
+
+* Education
+* Security research
+* Authorized load testing
+* Development
+* Defensive security testing
+
+Do **not** use this project to:
+
+* Attack websites
+* Perform unauthorized DDoS attacks
+* Disrupt third-party services
+* Overload infrastructure without permission
+* Circumvent security protections
+* Bypass CAPTCHA or anti-bot systems
+* Hide malicious traffic
+
+The user is solely responsible for ensuring that their use of this software complies with applicable laws, policies, and authorization requirements.
+
+---
+
+# 👨‍💻 Developer
+
+**Rahad Hasan**
+
+GitHub:
+
+`https://github.com/rahadhasan666`
+
+Repository:
+
+`https://github.com/rahadhasan666/hulkddos`
+
+---
+
+# 📜 License
+
+This project is intended for educational and authorized security-testing purposes.
+
+See the repository's license file for applicable licensing terms.
+
+---
+
+## ⭐ Support
+
+If you find this project useful for legitimate security research or development, consider giving the repository a ⭐ on GitHub.
+
+**Use responsibly. Test only with permission.**
